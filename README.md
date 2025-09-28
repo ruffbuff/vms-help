@@ -23,7 +23,7 @@ This guide helps you set up multiple virtual machines (VMs) for gaming promotion
 
 ### 1.3 Install Extension Pack
 1. Double-click the downloaded `.vbox-extpack` file
-2. Or in VirtualBox: **File � Preferences � Extensions � Add**
+2. Or in VirtualBox: **File -> Preferences -> Extensions -> Add**
 3. Accept the Oracle license agreement
 4. Restart VirtualBox
 
@@ -31,7 +31,7 @@ This guide helps you set up multiple virtual machines (VMs) for gaming promotion
 
 ### 2.1 Initial VirtualBox Configuration
 1. Open VirtualBox
-2. **File � Preferences � General:**
+2. **File -> Preferences -> General:**
    - Set "Default Machine Folder" to a drive with plenty of space
 3. **Input:** Leave Host Key as Right Ctrl (or change to preference)
 
@@ -63,30 +63,30 @@ This guide helps you set up multiple virtual machines (VMs) for gaming promotion
 ## Step 4: Configure VM for Gaming and Network Isolation
 
 ### 4.1 Display Settings
-1. Select your VM � **Settings � Display:**
+1. Select your VM -> **Settings -> Display:**
    - **Video Memory:** 128 MB (maximum)
    - **Graphics Controller:** VMSVGA or VBoxSVGA
-   - **Enable 3D Acceleration:**  (if available)
+   - **Enable 3D Acceleration:**  (if available)
 
 ### 4.2 Network Configuration (CRITICAL for isolation)
-1. **Settings � Network � Adapter 1:**
+1. **Settings -> Network -> Adapter 1:**
    - **Attached to:** Bridged Adapter
    - **Name:**
      - **For WiFi (laptops):** Select your WiFi adapter
      - **For Ethernet (desktops):** Select your Ethernet adapter
-   - **Advanced � MAC Address:** Click refresh button =
-   - **Cable connected:** 
+   - **Advanced -> MAC Address:** Click refresh button =
+   - **Cable connected:** 
 
 ### 4.3 System Optimization
-1. **Settings � System � Motherboard:**
-   - **Enable I/O APIC:** 
-2. **Settings � System � Processor:**
-   - **Enable PAE/NX:** 
+1. **Settings -> System -> Motherboard:**
+   - **Enable I/O APIC:** 
+2. **Settings -> System -> Processor:**
+   - **Enable PAE/NX:** 
 
 ### 4.4 Storage Configuration
-1. **Settings � Storage:**
-   - **Controller IDE � Empty**
-   - Click disk icon � **Choose a disk file**
+1. **Settings -> Storage:**
+   - **Controller IDE -> Empty**
+   - Click disk icon -> **Choose a disk file**
    - Select your Windows ISO file
 
 ## Step 5: Install Windows
@@ -97,15 +97,15 @@ This guide helps you set up multiple virtual machines (VMs) for gaming promotion
 3. Complete Windows setup with unique computer name (e.g., "GamePC-1")
 
 ### 5.2 Install Guest Additions
-1. In running VM: **Devices � Insert Guest Additions CD image**
-2. Open **This PC** � double-click **CD Drive (Guest Additions)**
+1. In running VM: **Devices -> Insert Guest Additions CD image**
+2. Open **This PC** -> double-click **CD Drive (Guest Additions)**
 3. Run **VBoxWindowsAdditions.exe** as administrator
 4. Install with default settings
 5. **Restart the VM**
 
 ### 5.3 Configure Display
 After restart:
-- **View � Auto-resize Guest Display** 
+- **View -> Auto-resize Guest Display** 
 - The screen will now resize properly with the window
 
 ## Step 6: Verify Network Isolation
@@ -126,9 +126,9 @@ ipconfig /all
 ```
 
 **Success indicators:**
--  Different IP addresses (e.g., Host: 192.168.1.50, VM: 192.168.1.100)
--  Different MAC addresses
--  Same default gateway (router IP)
+-  Different IP addresses (e.g., Host: 192.168.1.50, VM: 192.168.1.100)
+-  Different MAC addresses
+-  Same default gateway (router IP)
 
 ### 6.3 Test External IP
 In VM browser, visit: https://whatismyipaddress.com/
@@ -139,7 +139,7 @@ In VM browser, visit: https://whatismyipaddress.com/
 
 ### 7.1 Windows Performance Settings
 In the VM:
-1. **System � Advanced system settings � Performance � Settings**
+1. **System -> Advanced system settings -> Performance -> Settings**
 2. Select **"Adjust for best performance"**
 3. **Power Options:** Set to **"High performance"**
 
@@ -152,16 +152,16 @@ In the VM:
 
 ### 8.1 Clone Existing VM
 1. **Shut down** the first VM completely
-2. **Right-click VM � Clone**
+2. **Right-click VM -> Clone**
 3. **Name:** GameVM_2
-4. **MAC Address Policy:** � **Generate new MAC addresses for all network adapters**
+4. **MAC Address Policy:** -> **Generate new MAC addresses for all network adapters**
 5. **Clone Type:** Full clone
 6. Click **Clone**
 
 ### 8.2 Verify New VM Isolation
 1. Start the cloned VM
 2. Run `ipconfig /all` - should show different IP and MAC
-3. Change computer name: **Settings � System � About � Rename this PC**
+3. Change computer name: **Settings -> System -> About -> Rename this PC**
 
 ### 8.3 Browser Isolation (Important)
 For each VM, use different browsers or clear all data:
@@ -213,11 +213,11 @@ For each VM, use different browsers or clear all data:
 
 ## Important Notes
 
-� **Legal Disclaimer:** Only use this setup for legitimate promotional campaigns that allow multiple accounts. Always read terms of service.
+-> **Legal Disclaimer:** Only use this setup for legitimate promotional campaigns that allow multiple accounts. Always read terms of service.
 
-� **Performance:** VMs run 30-50% slower than native systems. Choose games accordingly.
+-> **Performance:** VMs run 30-50% slower than native systems. Choose games accordingly.
 
-� **Security:** Each VM is isolated but shares your internet connection and external IP address.
+-> **Security:** Each VM is isolated but shares your internet connection and external IP address.
 
 ## Quick Setup Checklist
 
